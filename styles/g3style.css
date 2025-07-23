@@ -130,25 +130,72 @@ main{
 .feature-title{
     justify-content: space-between;
 }
-.love{
-    color: #131313;
-    font-size:2.8rem;
-    font-weight:bold;
-}
-.love-description{
-    font-size: 1rem;
-    font-weight:400px;
-    color: #727272;
-}
-.love-enjoy{
+.love-feature {
+    margin-top: 100px;
     display: flex;
-    margin-top: 50px;
+    gap: 140px; /* optional: spacing between image and text section */
 }
+
+#love-feature-section-title {
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+
+.love-feature-card,
+.love-feature-card ~ div { /* এইটা পরের div গুলোকেও box বানাবে */
+    padding: 30px;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+    border-radius: 8px; /* optional: nicer corners */
+    background-color: white; /* to see the shadow better */
+}
+
 .some-facts{
     color: #131313;
     font-size:2.8rem;
     font-weight:bold;
 }
+.fact-container{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 50px;
+    justify-content: center;
+}
+.fact{
+    border: 1px solid #FF900E;
+    height: 240px;
+    width: 240px;
+    border-radius: 8px;
+    padding: 45px 59px;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+}
+.fact-number{
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+.fact-name{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.sponsor{
+    font-size: 53px;
+    font-weight: 327px;
+    text-align: center;
+}
+.sponsor-description{
+    text-align: center;
+}
+.last-image{
+    display: flex;
+    gap: 200px;
+}
+.foot{
+    background-color: #FFF4E7;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
 }
 /* responsive media query */
 

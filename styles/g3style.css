@@ -149,6 +149,17 @@ main{
     border-radius: 8px; /* optional: nicer corners */
     background-color: white; /* to see the shadow better */
 }
+#experience-badge{
+    padding: 45px 42px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left:-100px;
+    margin-top:-100px;
+}
+#experience-year{
+    font-size: 4rem;
+    font-weight: 700;
+}
 
 .some-facts{
     color: #131313;
@@ -199,29 +210,104 @@ main{
 }
 /* responsive media query */
 
-@media screen and (max-width:576px) {
-    .navbar, 
-    .nav-links, 
-    .teams{
+/* Small devices: Mobile (max-width: 576px) */
+@media screen and (max-width: 576px) {
+    .navbar,
+    .nav-links,
+    .teams,
+    .love-feature {
         flex-direction: column;
-
-    }
-    .team-img-container{
-        grid-template-columns: repeat(1,1fr);
-    }
-    .our-feature{
-        margin-left: 20px;
+        align-items: center;
+        text-align: center;
     }
 
-    
+    .nav-links {
+        padding: 0;
+        gap: 10px;
+    }
+
+    .team-img-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .our-feature {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .banner-content {
+        padding: 10px;
+    }
+
+    .love-feature > div {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .love-feature-card {
+        margin-bottom: 20px;
+    }
+
+    .banner-image,
+    .love-feature img {
+        width: 100%;
+        height: auto;
+    }
+
+    .fact-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+
+    .last-image {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        justify-items: center;
+    }
 }
-/* medium size device */
-@media screen and (min-width:576px) and (max-width: 992px) {
-    
-} {
-    
-}
 
+/* Medium devices: Tablet (576px - 992px) */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .teams,
+    .love-feature {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .team-img-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .love-feature-card {
+        margin-bottom: 25px;
+    }
+
+    .fact-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .last-image {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        justify-items: center;
+    }
+
+    .banner-image {
+        width: 100%;
+        height: auto;
+    }
+}
 
 
 
